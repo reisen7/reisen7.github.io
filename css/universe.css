@@ -14,3 +14,7 @@
   /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */
   z-index: -1;
 }
+/* 星空白天模式消失 */
+[data-theme="light"] #universe {
+  display: none !important;
+}
