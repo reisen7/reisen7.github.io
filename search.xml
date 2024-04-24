@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Doris记录</title>
+      <link href="/2024/04/24/Doris%E8%AE%B0%E5%BD%95/"/>
+      <url>/2024/04/24/Doris%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="部署doris-遇到的问题"><a href="#部署doris-遇到的问题" class="headerlink" title="部署doris 遇到的问题"></a>部署doris 遇到的问题</h3><h4 id="部署fe报错："><a href="#部署fe报错：" class="headerlink" title="部署fe报错："></a>部署fe报错：</h4><blockquote><p>ip address range configured for priority_networks does not include the current IP address</p></blockquote><p>解决：报错信息为，设置的网段没有包含当前网络。需要在fe的conf下设置priority_networks网段<br>（需要设置本机的ip地址而不是服务器的公网ip地址）<br>使用命令查看ip掩码地址<br>ip addr show eth0 | grep inet | awk ‘{print $2}’ | awk -F’&#x2F;‘ ‘{print $1}’</p><h4 id="启动be时报错："><a href="#启动be时报错：" class="headerlink" title="启动be时报错："></a>启动be时报错：</h4><blockquote><p>Please disable swap memory before installation</p></blockquote><p>Linux系统发现又swap分区正在使用，需要进行关闭<br>使用指令</p><ul><li>输入命令 “sudo &#x2F;bin&#x2F;bash” 进入管理员权限的shell。</li><li>输入命令 “sudo swapoff -a” 禁用所有交换分区。</li></ul><blockquote><p>The JAVA_HOME environment variable is not defined correctly   </p></blockquote><p>需要设置JAVA_HOME</p><h4 id="启动fe出错："><a href="#启动fe出错：" class="headerlink" title="启动fe出错："></a>启动fe出错：</h4><blockquote><p>wait catalog to be ready. FE type: UNKNOWN. is ready: false, counter: 658341</p></blockquote><p>需要查看是否有虚拟ip地址，有则重新设置。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Doris </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>服务器巡检</title>
       <link href="/2024/04/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B7%A1%E6%A3%80/"/>
       <url>/2024/04/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B7%A1%E6%A3%80/</url>
@@ -145,7 +170,7 @@
       
         <tags>
             
-            <tag> nginx </tag>
+            <tag> Nginx </tag>
             
         </tags>
       
@@ -245,7 +270,7 @@
       
         <tags>
             
-            <tag> doris </tag>
+            <tag> Doris </tag>
             
         </tags>
       
@@ -270,7 +295,7 @@
       
         <tags>
             
-            <tag> node </tag>
+            <tag> Node </tag>
             
         </tags>
       
@@ -324,10 +349,16 @@
         <content type="html"><![CDATA[<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&#123;</span></span><br><span class="line">    <span class="attr">&quot;workbench.iconTheme&quot;</span>: <span class="string">&quot;material-icon-theme&quot;,</span></span><br><span class="line">    <span class="attr">&quot;editor.guides.bracketPairs&quot;</span>: <span class="string">true,</span></span><br><span class="line">    <span class="attr">&quot;workbench.colorCustomizations&quot;</span>: <span class="string">&#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&#125;,</span></span><br><span class="line">    <span class="attr">&quot;editor.codeActionsOnSave&quot;</span>: <span class="string">&#123;</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">&#125;,</span></span><br><span class="line">    <span class="attr">&quot;files.autoSave&quot;</span>: <span class="string">&quot;afterDelay&quot;,</span></span><br><span class="line">    <span class="attr">//</span>  <span class="string">代理配置</span></span><br><span class="line">    <span class="attr">//</span> <span class="string">&quot;http.proxy&quot;: &quot;&quot;,</span></span><br><span class="line">    <span class="attr">//</span> <span class="string">&quot;http.proxyStrictSSL&quot;: false,</span></span><br><span class="line">    <span class="attr">//</span> <span class="string">&quot;http.proxySupport&quot;: &quot;on&quot;,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">//</span> <span class="string">springboot 配置</span></span><br><span class="line">    <span class="attr">&quot;java.jdt.ls.java.home&quot;</span>:<span class="string">&quot;d:\\etc\\jdk-17.0.8.7-hotspot&quot;,</span></span><br><span class="line">    <span class="attr">&quot;java.configuration.maven.userSettings&quot;</span>: <span class="string">&quot;D:\\usr\\apache-maven-3.9.4\\conf\\settings.xml&quot;,</span></span><br><span class="line">    <span class="attr">&quot;java.configuration.maven.globalSettings&quot;</span>: <span class="string">&quot;D:\\usr\\apache-maven-3.9.4\\conf\\settings.xml&quot;,</span></span><br><span class="line">    <span class="attr">&quot;maven.executable.path&quot;</span>: <span class="string">&quot;D:\\usr\\apache-maven-3.9.4\\bin\\mvn.cmd&quot;,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;maven.excludedFolders&quot;</span>: <span class="string">[</span></span><br><span class="line"></span><br><span class="line">        <span class="attr">&quot;**/.*&quot;,</span></span><br><span class="line">        <span class="attr">&quot;**/node_modules&quot;,</span></span><br><span class="line">        <span class="attr">&quot;**/target&quot;,</span></span><br><span class="line">        <span class="attr">&quot;**/bin&quot;,</span></span><br><span class="line">        <span class="attr">&quot;**/archetype-resources&quot;</span></span><br><span class="line">    <span class="attr">],</span></span><br><span class="line">    <span class="attr">&quot;extensions.autoUpdate&quot;</span>: <span class="string">false,</span></span><br><span class="line">    <span class="attr">&quot;redhat.telemetry.enabled&quot;</span>: <span class="string">true,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">//</span> <span class="string">java</span></span><br><span class="line">    <span class="attr">&quot;java.configuration.runtimes&quot;</span>: <span class="string">[</span></span><br><span class="line"></span><br><span class="line">        <span class="attr">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;JavaSE-1.8&quot;,</span></span><br><span class="line">          <span class="attr">&quot;path&quot;</span>: <span class="string">&quot;D:\\etc\\jdk-1.8&quot;,</span></span><br><span class="line">        <span class="attr">&#125;,</span></span><br><span class="line">        <span class="attr">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;JavaSE-11&quot;,</span></span><br><span class="line">          <span class="attr">&quot;path&quot;</span>: <span class="string">&quot;D:\\etc\\jdk-11.0.20.8-hotspot&quot;,</span></span><br><span class="line">        <span class="attr">&#125;,</span></span><br><span class="line">        <span class="attr">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;JavaSE-17&quot;,</span></span><br><span class="line">          <span class="attr">&quot;path&quot;</span>: <span class="string">&quot;D:\\etc\\jdk-17.0.8.7-hotspot&quot;,</span></span><br><span class="line">          <span class="attr">&quot;default&quot;</span>: <span class="string">true</span></span><br><span class="line">        <span class="attr">&#125;,</span></span><br><span class="line">      <span class="attr">],</span></span><br><span class="line">      <span class="attr">&quot;boot-java.rewrite.reconcile&quot;</span>: <span class="string">true,</span></span><br><span class="line">      <span class="attr">&quot;security.workspace.trust.untrustedFiles&quot;</span>: <span class="string">&quot;open&quot;,</span></span><br><span class="line">      <span class="attr">&quot;remote.SSH.remotePlatform&quot;</span>: <span class="string">&#123;</span></span><br><span class="line">        <span class="attr">&quot;60.204.200.91&quot;</span>: <span class="string">&quot;linux&quot;</span></span><br><span class="line">      <span class="attr">&#125;,</span></span><br><span class="line">      <span class="attr">&quot;workbench.colorTheme&quot;</span>: <span class="string">&quot;Default Dark+&quot;,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> vscode </tag>
+            <tag> VsCode </tag>
             
         </tags>
       
