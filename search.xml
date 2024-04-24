@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>服务器巡检</title>
+      <link href="/2024/04/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B7%A1%E6%A3%80/"/>
+      <url>/2024/04/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B7%A1%E6%A3%80/</url>
+      
+        <content type="html"><![CDATA[<h3 id="巡检命令"><a href="#巡检命令" class="headerlink" title="巡检命令"></a>巡检命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure><p>查看cpu的空闲时间以及IO等待完成时间</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -h</span><br></pre></td></tr></table></figure><p>查看avaliable的使用情况</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure><p>查看磁盘空间占用情况</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getenforce</span><br></pre></td></tr></table></figure><p>使用getenforce命令可以在Linux下查看是否开启了SELinux<br>如果为disable则有风险</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure><p>查看防火墙是否开启</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure><p>查看有没有未知的定时任务</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Map的四种遍历方式</title>
       <link href="/2024/04/24/map%E7%9A%84%E5%9B%9B%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/"/>
       <url>/2024/04/24/map%E7%9A%84%E5%9B%9B%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/</url>
