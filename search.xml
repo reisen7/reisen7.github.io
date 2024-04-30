@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Can&#39;t find dependent libraries</title>
+      <link href="/2024/04/30/Can&#39;t%20find%20dependent%20libraries/"/>
+      <url>/2024/04/30/Can&#39;t%20find%20dependent%20libraries/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>在部署hadoop项目过程中，出现了这个报错<br><em>Exception in thread “main” java.lang.UnsatisfiedLinkError: E:\winutils-master\hadoop-3.3.5\bin\hadoop.dll: Can’t find dependent libraries</em><br>这个报错大概意思就是：dll缺所需的依赖  </p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>使用depends来查找所缺的依赖，该工具的下载地址：<a href="http://www.dependencywalker.com/">depends</a>  </p><p>使用的时候直接把dll文件拽进去等着搜索就行了<br> <img src="/img/posts/20240430" alt="alt"><br>如图可以看到缺了哪些依赖，直接上网搜索添加即可</p><h3 id="depends查找很慢"><a href="#depends查找很慢" class="headerlink" title="depends查找很慢"></a>depends查找很慢</h3><ul><li>创建run_depends.txt文件</li><li>输入以下内容（两行）</li></ul><pre><code class="bat">set PATH=&quot;&quot;&quot;D:\Tools\depends\depends22_x64\depends.exe&quot;```*注意要讲上面的路径改成depends的路径*- 将run_depends.txt后缀名改为bat然后直接启动这个bat文件就可以了，这样查找很快速</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hadoop </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>炫酷的border样式</title>
       <link href="/2024/04/28/%E7%82%AB%E9%85%B7%E7%9A%84border%E6%A0%B7%E5%BC%8F/"/>
       <url>/2024/04/28/%E7%82%AB%E9%85%B7%E7%9A%84border%E6%A0%B7%E5%BC%8F/</url>
@@ -145,9 +170,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> G2 </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
