@@ -31,6 +31,31 @@
     
     
     <entry>
+      <title>privateMap.get is not a function</title>
+      <link href="/2024/05/01/privateMap%20get%20is%20not%20a%20function/"/>
+      <url>/2024/05/01/privateMap%20get%20is%20not%20a%20function/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>G2图绘制过程中，在渲染过程中前端报错其中报错信息如下</p><blockquote><p>tslib.es6.js:233 Uncaught (in promise) TypeError: privateMap.get is not a function</p></blockquote><p>在GitHub上找到相应的解答</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>内部包缺少<code>tslib</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save tslib</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure><p>GitHub原文链接</p><p><a href="%5Bhttps://%5D(https://github.com/descope/react-sdk/issues/301)">TypeError: privateMap.get is not a function</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> G2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Can&#39;t find dependent libraries</title>
       <link href="/2024/04/30/Can&#39;t%20find%20dependent%20libraries/"/>
       <url>/2024/04/30/Can&#39;t%20find%20dependent%20libraries/</url>
@@ -200,31 +225,6 @@
             <tag> G2 </tag>
             
             <tag> Vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>privateMap.get is not a function</title>
-      <link href="/2024/04/23/privateMap%20get%20is%20not%20a%20function/"/>
-      <url>/2024/04/23/privateMap%20get%20is%20not%20a%20function/</url>
-      
-        <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>G2图绘制过程中，在渲染过程中前端报错其中报错信息如下</p><blockquote><p>tslib.es6.js:233 Uncaught (in promise) TypeError: privateMap.get is not a function</p></blockquote><p>在GitHub上找到相应的解答</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>内部包缺少<code>tslib</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save tslib</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure><p>GitHub原文链接</p><p><a href="%5Bhttps://%5D(https://github.com/descope/react-sdk/issues/301)">TypeError: privateMap.get is not a function</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 小笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> G2 </tag>
             
         </tags>
       
