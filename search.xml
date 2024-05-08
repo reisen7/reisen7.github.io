@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>镜像</title>
+      <link href="/2024/05/08/%E9%95%9C%E5%83%8F/"/>
+      <url>/2024/05/08/%E9%95%9C%E5%83%8F/</url>
+      
+        <content type="html"><![CDATA[<p>npm  </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><p>nvm</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: https://npmmirror.com/mirrors/node/</span><br><span class="line">npm_mirror: https://npmmirror.com/mirrors/npm/</span><br></pre></td></tr></table></figure><p>python</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install  -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure><p>kali</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">中科大 </span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib </span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line"> </span><br><span class="line">阿里云 </span><br><span class="line">deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib </span><br><span class="line">deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line"> </span><br><span class="line">清华大学 </span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free </span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"> </span><br><span class="line">说明：deb代表软件的位置，deb-src代表软件的源代码位置</span><br><span class="line"> </span><br><span class="line">配置kali apt为阿里源实例：</span><br><span class="line">配置思路方法 修改 /etc/apt/sources.list，加入以下内容将相关url改成阿里云的源。 </span><br><span class="line"> </span><br><span class="line">deb https://mirrors.aliyun.com/kali kali-rolling main non-free contrib </span><br><span class="line">deb-src https://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue2使用g2</title>
       <link href="/2024/05/05/Vue2%E4%BD%BF%E7%94%A8g2/"/>
       <url>/2024/05/05/Vue2%E4%BD%BF%E7%94%A8g2/</url>
