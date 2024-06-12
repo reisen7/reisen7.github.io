@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Layui实现放大图片的效果</title>
+      <link href="/2024/06/03/Layui%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/"/>
+      <url>/2024/06/03/Layui%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</url>
+      
+        <content type="html"><![CDATA[<p>需要在表格里面添加查看图片的模板</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Layui </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>镜像</title>
       <link href="/2024/05/08/%E9%95%9C%E5%83%8F/"/>
       <url>/2024/05/08/%E9%95%9C%E5%83%8F/</url>
