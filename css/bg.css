@@ -1,6 +1,6 @@
 #web_bg {
     /* 背景图像的地址（url括号里）  */
-    background-image: url(https://sigtuna.oss-cn-beijing.aliyuncs.com/backgrd_compressed.png);
+    background-image: url("https://sigtuna.oss-cn-beijing.aliyuncs.com/backgrd_compressed.png");
     /* 背景图像不重复 */
     background-repeat: no-repeat;
     /* 背景图像大小 */
