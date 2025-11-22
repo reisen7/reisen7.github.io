@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>nginx | 铃仙小屋</title><meta name="author" content="Reisen"><meta name="copyright" content="Reisen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Ngixn 部分功能介绍1.http服务器12345当只有静态资源的时候，可以使用Nginx做HTTP服务器，可以将服务器上的静态文件（如HTML、图片）通过HTTP协议展现给客户端。动静分离常用于前后端分离，Nginx提供的动静分离是指把动态请求和静态请求分离开，合适的服务器处理相应的请求，使整个服务器系统的性能、效率更高。Nginx可以根据配置对不同的请求做不同转发，这是动静分离的基础。静态请">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx">
-<meta property="og:url" content="https://www.reisen7.cc/2024/04/21/nginx/index.html">
+<meta property="og:url" content="https://www.reisen7.xyz/2024/04/21/nginx/index.html">
 <meta property="og:site_name" content="铃仙小屋">
 <meta property="og:description" content="Ngixn 部分功能介绍1.http服务器12345当只有静态资源的时候，可以使用Nginx做HTTP服务器，可以将服务器上的静态文件（如HTML、图片）通过HTTP协议展现给客户端。动静分离常用于前后端分离，Nginx提供的动静分离是指把动态请求和静态请求分离开，合适的服务器处理相应的请求，使整个服务器系统的性能、效率更高。Nginx可以根据配置对不同的请求做不同转发，这是动静分离的基础。静态请">
 <meta property="og:locale" content="zh_CN">
@@ -11,7 +11,7 @@
 <meta property="article:author" content="Reisen">
 <meta property="article:tag" content="Nginx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sigtuna.oss-cn-beijing.aliyuncs.com/cover2.png"><link rel="shortcut icon" href="/img/amber.png"><link rel="canonical" href="https://www.reisen7.cc/2024/04/21/nginx/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://sigtuna.oss-cn-beijing.aliyuncs.com/cover2.png"><link rel="shortcut icon" href="/img/amber.png"><link rel="canonical" href="https://www.reisen7.xyz/2024/04/21/nginx/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
