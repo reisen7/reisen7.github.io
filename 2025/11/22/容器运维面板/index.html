@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>容器运维面板 - Rabbit Panel | 铃仙小屋</title><meta name="author" content="Reisen"><meta name="copyright" content="Reisen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="容器运维面板 - Rabbit Panel一个极致轻量化的容器运维面板，专为 4GB 内存设备设计，支持 ARM64&#x2F;armv7l&#x2F;x86_64 架构。 仓库地址: Rabbit Panel 特性 🚀 极致轻量: 运行时内存 ≤30MB，部署包 ≤10MB 🐳 容器管理: 启动&#x2F;停止&#x2F;重启&#x2F;删除容器，实时查看日志 📦 镜像管理: 查看和删除镜">
+<meta property="og:type" content="article">
+<meta property="og:title" content="容器运维面板 - Rabbit Panel">
+<meta property="og:url" content="https://www.reisen7.xyz/2025/11/22/%E5%AE%B9%E5%99%A8%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/index.html">
+<meta property="og:site_name" content="铃仙小屋">
+<meta property="og:description" content="容器运维面板 - Rabbit Panel一个极致轻量化的容器运维面板，专为 4GB 内存设备设计，支持 ARM64&#x2F;armv7l&#x2F;x86_64 架构。 仓库地址: Rabbit Panel 特性 🚀 极致轻量: 运行时内存 ≤30MB，部署包 ≤10MB 🐳 容器管理: 启动&#x2F;停止&#x2F;重启&#x2F;删除容器，实时查看日志 📦 镜像管理: 查看和删除镜">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sigtuna.oss-cn-beijing.aliyuncs.com/79008987_p0_compressed.png">
+<meta property="article:published_time" content="2025-11-22T10:11:01.000Z">
+<meta property="article:modified_time" content="2025-11-22T10:14:49.121Z">
+<meta property="article:author" content="Reisen">
+<meta property="article:tag" content="Docker">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sigtuna.oss-cn-beijing.aliyuncs.com/79008987_p0_compressed.png"><link rel="shortcut icon" href="/img/amber.png"><link rel="canonical" href="https://www.reisen7.xyz/2025/11/22/%E5%AE%B9%E5%99%A8%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50000,"languages":{"author":"作者: Reisen","link":"链接: ","source":"来源: 铃仙小屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://fastly.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://fastly.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '容器运维面板 - Rabbit Panel',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-11-22 18:14:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link href="https://gstatic.qaq.qa/css2?family=Roboto&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/bg.css"><link rel="stylesheet" href="/css/font.css"><script language="JavaScript" type="text/javascript" src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><link rel="stylesheet" type="text/css" href="/css/fps.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=328170849&amp;s=640" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">75</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comments/index.html"><i class="fa-fw fas fa-heartbeat"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://sigtuna.oss-cn-beijing.aliyuncs.com/79008987_p0_compressed.png')"><nav id="nav"><span id="blog-info"><a href="/" title="铃仙小屋"><img class="site-icon" src="/img/amber.png"/><span class="site-name">铃仙小屋</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comments/index.html"><i class="fa-fw fas fa-heartbeat"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">容器运维面板 - Rabbit Panel</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-11-22T10:11:01.000Z" title="发表于 2025-11-22 18:11:01">2025-11-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-22T10:14:49.121Z" title="更新于 2025-11-22 18:14:49">2025-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">解决方案</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="容器运维面板 - Rabbit Panel"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="容器运维面板-Rabbit-Panel"><a href="#容器运维面板-Rabbit-Panel" class="headerlink" title="容器运维面板 - Rabbit Panel"></a>容器运维面板 - Rabbit Panel</h1><p>一个极致轻量化的容器运维面板，专为 4GB 内存设备设计，支持 ARM64&#x2F;armv7l&#x2F;x86_64 架构。</p>
+<p>仓库地址: <a target="_blank" rel="noopener" href="https://github.com/reisen7/rabbit-panel">Rabbit Panel</a></p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>🚀 <strong>极致轻量</strong>: 运行时内存 ≤30MB，部署包 ≤10MB</li>
+<li>🐳 <strong>容器管理</strong>: 启动&#x2F;停止&#x2F;重启&#x2F;删除容器，实时查看日志</li>
+<li>📦 <strong>镜像管理</strong>: 查看和删除镜像</li>
+<li>📊 <strong>系统监控</strong>: 实时 CPU&#x2F;内存&#x2F;磁盘使用率监控</li>
+<li>🌐 <strong>响应式设计</strong>: 支持 PC&#x2F;平板&#x2F;手机浏览器</li>
+<li>🔧 <strong>无依赖</strong>: 单二进制文件，无需数据库，无需额外安装</li>
+<li>🎯 <strong>多节点管理</strong>: 支持 Master&#x2F;Worker 模式，统一管理多服务器节点</li>
+<li>🔒 <strong>安全认证</strong>: 用户登录认证和节点间通信加密</li>
+</ul>
+<h2 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h2><ul>
+<li>Docker 20.10+ 已安装并运行</li>
+<li>Linux 系统 (Armbian&#x2F;Ubuntu&#x2F;Debian)</li>
+<li>4GB+ 内存设备</li>
+<li>Go 1.22+ (仅编译时需要)</li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="1-安装-Docker-如果未安装"><a href="#1-安装-Docker-如果未安装" class="headerlink" title="1. 安装 Docker (如果未安装)"></a>1. 安装 Docker (如果未安装)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Ubuntu/Debian</span></span><br><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将当前用户添加到 docker 组</span></span><br><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line">newgrp docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-下载编译好的二进制文件"><a href="#2-下载编译好的二进制文件" class="headerlink" title="2. 下载编译好的二进制文件"></a>2. 下载编译好的二进制文件</h3><p>根据你的系统架构下载对应的版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># x86_64</span></span><br><span class="line">wget https://github.com/your-repo/rabbit-panel/releases/download/v1.0.0/rabbit-panel-linux-amd64</span><br><span class="line"></span><br><span class="line"><span class="comment"># ARM64</span></span><br><span class="line">wget https://github.com/your-repo/rabbit-panel/releases/download/v1.0.0/rabbit-panel-linux-arm64</span><br><span class="line"></span><br><span class="line"><span class="comment"># ARMv7</span></span><br><span class="line">wget https://github.com/your-repo/rabbit-panel/releases/download/v1.0.0/rabbit-panel-linux-armv7</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-从源码编译"><a href="#3-从源码编译" class="headerlink" title="3. 从源码编译"></a>3. 从源码编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆代码</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/your-repo/rabbit-panel.git</span><br><span class="line"><span class="built_in">cd</span> rabbit-panel</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line"><span class="built_in">chmod</span> +x setup-deps.sh</span><br><span class="line">./setup-deps.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译 (支持多架构)</span></span><br><span class="line"><span class="built_in">chmod</span> +x build.sh</span><br><span class="line">./build.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译后的文件在 dist/ 目录</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-运行面板"><a href="#4-运行面板" class="headerlink" title="4. 运行面板"></a>4. 运行面板</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 确保 static 目录存在</span></span><br><span class="line"><span class="built_in">mkdir</span> -p static</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行面板 (默认端口 9999)</span></span><br><span class="line">./rabbit-panel-linux-amd64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或指定端口</span></span><br><span class="line">PORT=9090 ./rabbit-panel-linux-amd64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或指定监听地址和端口</span></span><br><span class="line">HOST=0.0.0.0 PORT=9999 ./rabbit-panel-linux-amd64</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-访问面板"><a href="#5-访问面板" class="headerlink" title="5. 访问面板"></a>5. 访问面板</h3><ul>
+<li><strong>本地访问</strong>: <code>http://localhost:9999</code></li>
+<li><strong>外网访问</strong>: <code>http://&lt;服务器IP&gt;:9999</code></li>
+<li><strong>默认账户</strong>: <code>admin</code> &#x2F; <code>admin</code></li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>: 首次登录必须修改密码。默认监听 <code>0.0.0.0:9999</code>，可以从外网访问。</p>
+</blockquote>
+<h2 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h2><h3 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h3><ul>
+<li><strong>列表展示</strong>: 显示容器 ID、名称、镜像、状态、端口映射、内存占用、创建时间</li>
+<li><strong>操作功能</strong>: 启动、停止、重启、删除、查看日志（实时流式输出）</li>
+<li><strong>自动刷新</strong>: 容器列表每 5 秒自动刷新</li>
+</ul>
+<h3 id="镜像管理"><a href="#镜像管理" class="headerlink" title="镜像管理"></a>镜像管理</h3><ul>
+<li><strong>列表展示</strong>: 显示镜像 ID、名称、标签、大小、创建时间</li>
+<li><strong>操作功能</strong>: 删除镜像（如果被容器使用会提示先删除容器）</li>
+</ul>
+<h3 id="系统监控"><a href="#系统监控" class="headerlink" title="系统监控"></a>系统监控</h3><ul>
+<li><strong>实时监控</strong>: CPU 使用率、内存使用率、磁盘使用率</li>
+<li><strong>自动刷新</strong>: 每 5 秒自动刷新</li>
+<li><strong>时间显示</strong>: 显示服务器当前时间</li>
+</ul>
+<h2 id="多节点管理"><a href="#多节点管理" class="headerlink" title="多节点管理"></a>多节点管理</h2><p>Rabbit Panel 支持多节点容器管理，类似 Kubernetes 但更轻量化。</p>
+<h3 id="启动-Master-节点（控制节点）"><a href="#启动-Master-节点（控制节点）" class="headerlink" title="启动 Master 节点（控制节点）"></a>启动 Master 节点（控制节点）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法 1: 使用启动脚本</span></span><br><span class="line"><span class="built_in">chmod</span> +x start-master.sh</span><br><span class="line">./start-master.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法 2: 直接运行</span></span><br><span class="line">MODE=master PORT=9999 ./rabbit-panel-linux-arm64</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动-Worker-节点（工作节点）"><a href="#启动-Worker-节点（工作节点）" class="headerlink" title="启动 Worker 节点（工作节点）"></a>启动 Worker 节点（工作节点）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法 1: 使用启动脚本</span></span><br><span class="line">MASTER_URL=http://master-ip:9999 NODE_NAME=worker-1 ./start-worker.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法 2: 直接运行</span></span><br><span class="line">MASTER_URL=http://master-ip:9999 \</span><br><span class="line">NODE_NAME=worker-1 \</span><br><span class="line">MODE=worker \</span><br><span class="line">PORT=10001 \</span><br><span class="line">./rabbit-panel-linux-arm64</span><br></pre></td></tr></table></figure>
+
+<h3 id="多节点功能"><a href="#多节点功能" class="headerlink" title="多节点功能"></a>多节点功能</h3><ul>
+<li>✅ <strong>统一管理</strong>: 在 Master 节点查看和管理所有 Worker 节点的容器</li>
+<li>✅ <strong>智能调度</strong>: 自动选择最佳节点部署容器</li>
+<li>✅ <strong>节点监控</strong>: 实时监控所有节点的资源使用情况</li>
+<li>✅ <strong>跨节点操作</strong>: 在 Master 节点操作任意 Worker 节点的容器</li>
+</ul>
+<p>详细文档请参考: <a href="MULTI-NODE.md">MULTI-NODE.md</a></p>
+<h2 id="快速测试"><a href="#快速测试" class="headerlink" title="快速测试"></a>快速测试</h2><p>创建测试容器来验证面板功能：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法1: 一键创建测试容器（推荐）</span></span><br><span class="line"><span class="built_in">chmod</span> +x quick-test.sh</span><br><span class="line">./quick-test.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法2: 交互式创建测试容器</span></span><br><span class="line"><span class="built_in">chmod</span> +x test-containers.sh</span><br><span class="line">./test-containers.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法3: 手动创建简单测试容器</span></span><br><span class="line">docker run -d --name test-nginx -p 8081:80 nginx:alpine</span><br><span class="line">docker run -d --name test-redis -p 6379:6379 redis:alpine</span><br></pre></td></tr></table></figure>
+
+<h2 id="开发模式（热重载）"><a href="#开发模式（热重载）" class="headerlink" title="开发模式（热重载）"></a>开发模式（热重载）</h2><p>项目支持热重载开发模式，修改代码后自动重新编译并重启。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 Air（推荐）</span></span><br><span class="line"><span class="built_in">chmod</span> +x dev.sh</span><br><span class="line">./dev.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问 http://localhost:9999</span></span><br><span class="line"><span class="comment"># 修改代码后会自动重新编译并重启</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="1-无法连接到-Docker"><a href="#1-无法连接到-Docker" class="headerlink" title="1. 无法连接到 Docker"></a>1. 无法连接到 Docker</h3><p><strong>错误信息</strong>: <code>无法连接到 Docker: ...</code></p>
+<p><strong>解决方法</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查 Docker 服务状态</span></span><br><span class="line">sudo systemctl status docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动 Docker 服务</span></span><br><span class="line">sudo systemctl start docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查当前用户是否有 Docker 权限</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果提示权限错误，将用户添加到 docker 组</span></span><br><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line">newgrp docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-端口被占用"><a href="#2-端口被占用" class="headerlink" title="2. 端口被占用"></a>2. 端口被占用</h3><p><strong>错误信息</strong>: <code>listen tcp :9999: bind: address already in use</code></p>
+<p><strong>解决方法</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用其他端口</span></span><br><span class="line">PORT=9090 ./rabbit-panel-linux-amd64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或查看占用 9999 端口的进程</span></span><br><span class="line">sudo lsof -i :9999</span><br><span class="line">sudo <span class="built_in">kill</span> -9 &lt;PID&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-容器日志无法查看"><a href="#3-容器日志无法查看" class="headerlink" title="3. 容器日志无法查看"></a>3. 容器日志无法查看</h3><p><strong>可能原因</strong>: 容器已停止、容器 ID 错误、Docker API 权限不足</p>
+<p><strong>解决方法</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查容器状态</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 Docker 权限</span></span><br><span class="line">docker logs &lt;container-id&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-内存占用过高"><a href="#4-内存占用过高" class="headerlink" title="4. 内存占用过高"></a>4. 内存占用过高</h3><p><strong>优化建议</strong>:</p>
+<ul>
+<li>确保使用编译优化版本 (已启用 <code>-ldflags=&quot;-s -w&quot;</code>)</li>
+<li>定期清理无用的容器和镜像</li>
+<li>关闭不需要的容器日志流</li>
+</ul>
+<h3 id="5-编译失败"><a href="#5-编译失败" class="headerlink" title="5. 编译失败"></a>5. 编译失败</h3><p><strong>错误信息</strong>: <code>cannot find package &quot;github.com/docker/docker/client&quot;</code></p>
+<p><strong>解决方法</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化 Go 模块</span></span><br><span class="line">go mod init rabbit-panel</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载依赖</span></span><br><span class="line">go mod tidy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新编译</span></span><br><span class="line">go build -o rabbit-panel main.go</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-网络问题-无法下载依赖"><a href="#6-网络问题-无法下载依赖" class="headerlink" title="6. 网络问题 - 无法下载依赖"></a>6. 网络问题 - 无法下载依赖</h3><p><strong>错误信息</strong>: <code>dial tcp 142.250.196.209:443: i/o timeout</code></p>
+<p><strong>解决方法</strong>:</p>
+<p><strong>方法 1: 使用提供的脚本（推荐）</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x setup-deps.sh</span><br><span class="line">./setup-deps.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法 2: 手动设置 Go 代理</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置 Go 代理为国内镜像</span></span><br><span class="line"><span class="built_in">export</span> GOPROXY=https://goproxy.cn,direct</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载依赖</span></span><br><span class="line">go mod download</span><br><span class="line">go mod tidy</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法 3: 永久设置 Go 代理</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将代理设置写入 ~/.bashrc</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export GOPROXY=https://goproxy.cn,direct&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者使用 go env 设置</span></span><br><span class="line">go <span class="built_in">env</span> -w GOPROXY=https://goproxy.cn,direct</span><br></pre></td></tr></table></figure>
+
+<h2 id="安全说明"><a href="#安全说明" class="headerlink" title="安全说明"></a>安全说明</h2><h3 id="用户认证"><a href="#用户认证" class="headerlink" title="用户认证"></a>用户认证</h3><p>所有 Web UI 访问的 API 都需要用户登录认证：</p>
+<ul>
+<li><strong>默认账户</strong>: <code>admin</code> &#x2F; <code>admin</code></li>
+<li><strong>首次登录</strong>: 必须修改密码</li>
+<li><strong>密码要求</strong>: 至少 8 位，包含大小写字母、数字和特殊字符</li>
+</ul>
+<h3 id="节点间认证"><a href="#节点间认证" class="headerlink" title="节点间认证"></a>节点间认证</h3><p>Master 和 Worker 节点之间的通信使用 HMAC-SHA256 认证机制。</p>
+<p><strong>生产环境必须设置节点密钥</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NODE_SECRET=your-secret-key-here ./rabbit-panel-linux-amd64</span><br></pre></td></tr></table></figure>
+
+<h3 id="生产环境建议"><a href="#生产环境建议" class="headerlink" title="生产环境建议"></a>生产环境建议</h3><ol>
+<li><strong>使用 HTTPS</strong>: 通过 Nginx&#x2F;Caddy 配置 HTTPS 反向代理</li>
+<li><strong>防火墙配置</strong>: 限制访问端口</li>
+<li><strong>定期更新密钥</strong>: 定期更换 <code>NODE_SECRET</code> 和 <code>JWT_SECRET</code></li>
+</ol>
+<p>详细文档请参考: <a href="SECURITY.md">SECURITY.md</a></p>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="资源占用"><a href="#资源占用" class="headerlink" title="资源占用"></a>资源占用</h3><ul>
+<li><strong>运行时内存</strong>: ≤30MB</li>
+<li><strong>二进制文件大小</strong>: ≤10MB</li>
+<li><strong>静态资源</strong>: ≤100KB (Tailwind CSS 通过 CDN 加载)</li>
+</ul>
+<h3 id="优化措施"><a href="#优化措施" class="headerlink" title="优化措施"></a>优化措施</h3><ol>
+<li><strong>编译优化</strong>: 使用 <code>-ldflags=&quot;-s -w&quot;</code> 去除符号表和调试信息</li>
+<li><strong>无数据库</strong>: 所有数据直接从 Docker API 获取，无持久化存储</li>
+<li><strong>连接管理</strong>: 容器日志流关闭后立即释放连接</li>
+<li><strong>内存管理</strong>: 定期清理无用协程，避免内存泄漏</li>
+<li><strong>数据缓存</strong>: 容器和镜像列表使用内存缓存，减少 Docker API 调用</li>
+</ol>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">rabbit-panel/</span><br><span class="line">├── main.go              # 后端主文件</span><br><span class="line">├── auth.go              # 认证模块</span><br><span class="line">├── node.go              # 节点管理模块</span><br><span class="line">├── scheduler.go         # 容器调度模块</span><br><span class="line">├── static/              # 静态文件目录</span><br><span class="line">│   └── index.html      # 前端页面</span><br><span class="line">├── build.sh             # 编译脚本</span><br><span class="line">├── start.sh             # 生产环境启动脚本</span><br><span class="line">├── start-master.sh      # Master 启动脚本</span><br><span class="line">├── start-worker.sh      # Worker 启动脚本</span><br><span class="line">├── setup-deps.sh        # 依赖下载脚本</span><br><span class="line">├── dev.sh               # 开发模式脚本</span><br><span class="line">├── .air.toml            # Air 配置文件</span><br><span class="line">├── go.mod               # Go 模块定义</span><br><span class="line">├── go.sum               # Go 模块校验和</span><br><span class="line">├── README.md            # 说明文档</span><br><span class="line">├── ARCHITECTURE.md      # 架构设计文档</span><br><span class="line">├── MULTI-NODE.md        # 多节点使用指南</span><br><span class="line">├── NODE-COMMUNICATION.md # 节点通信详解</span><br><span class="line">└── SECURITY.md          # 安全说明文档</span><br></pre></td></tr></table></figure>
+
+<h2 id="API-接口"><a href="#API-接口" class="headerlink" title="API 接口"></a>API 接口</h2><h3 id="单节点-API"><a href="#单节点-API" class="headerlink" title="单节点 API"></a>单节点 API</h3><ul>
+<li><code>GET /api/system/stats</code> - 获取系统监控数据</li>
+<li><code>GET /api/containers</code> - 获取容器列表</li>
+<li><code>POST /api/containers/action</code> - 容器操作 (start&#x2F;stop&#x2F;restart&#x2F;remove)</li>
+<li><code>GET /api/containers/logs?id=&lt;container-id&gt;</code> - 获取容器日志 (SSE 流式)</li>
+<li><code>GET /api/images</code> - 获取镜像列表</li>
+<li><code>POST /api/images/remove</code> - 删除镜像</li>
+<li><code>GET /api/health</code> - 健康检查</li>
+</ul>
+<h3 id="多节点-API-Master"><a href="#多节点-API-Master" class="headerlink" title="多节点 API (Master)"></a>多节点 API (Master)</h3><ul>
+<li><code>GET /api/nodes</code> - 获取所有节点列表</li>
+<li><code>POST /api/containers/schedule</code> - 跨节点调度容器</li>
+<li><code>GET /api/containers/all</code> - 获取所有节点的容器</li>
+</ul>
+<h3 id="认证-API"><a href="#认证-API" class="headerlink" title="认证 API"></a>认证 API</h3><ul>
+<li><code>POST /api/auth/login</code> - 用户登录</li>
+<li><code>POST /api/auth/logout</code> - 用户登出</li>
+<li><code>POST /api/auth/change-password</code> - 修改密码</li>
+</ul>
+<h2 id="扩展开发"><a href="#扩展开发" class="headerlink" title="扩展开发"></a>扩展开发</h2><p>如需添加新功能，请遵循以下原则:</p>
+<ol>
+<li><strong>保持轻量化</strong>: 新增功能不应显著增加内存占用</li>
+<li><strong>无数据库</strong>: 如需缓存，使用内存临时存储</li>
+<li><strong>单文件后端</strong>: 尽量将代码集中在主文件中</li>
+<li><strong>原生前端</strong>: 使用原生 HTML&#x2F;CSS&#x2F;JS，避免引入框架</li>
+</ol>
+<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p>MIT License</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Docker/">Docker</a></div><div class="post_share"><div class="social-share" data-image="https://sigtuna.oss-cn-beijing.aliyuncs.com/79008987_p0_compressed.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/10/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8ESpring%20Boot%E7%9A%84MCP%E7%B3%BB%E7%BB%9F%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/" title="从零开始搭建基于Spring Boot的MCP（Model Context Protocol）系统完整教程"><img class="cover" src="https://sigtuna.oss-cn-beijing.aliyuncs.com/cover2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">从零开始搭建基于Spring Boot的MCP（Model Context Protocol）系统完整教程</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/12/17/IDEA%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%E5%88%B0docker%E4%B8%AD/" title="IDEA快速部署到docker中"><img class="cover" src="https://sigtuna.oss-cn-beijing.aliyuncs.com/cover1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-17</div><div class="title">IDEA快速部署到docker中</div></div></a></div><div><a href="/2024/12/17/YUM%E5%AE%89%E8%A3%85docker-compose/" title="YUM安装docker-compose"><img class="cover" src="https://sigtuna.oss-cn-beijing.aliyuncs.com/cover2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-17</div><div class="title">YUM安装docker-compose</div></div></a></div><div><a href="/2024/12/17/%E9%80%9A%E7%94%A8dockerfile%E6%96%87%E4%BB%B6/" title="通用dockerfile文件"><img class="cover" src="https://sigtuna.oss-cn-beijing.aliyuncs.com/78166169_p0_compressed.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-17</div><div class="title">通用dockerfile文件</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF-Rabbit-Panel"><span class="toc-number">1.</span> <span class="toc-text">容器运维面板 - Rabbit Panel</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="toc-number">1.2.</span> <span class="toc-text">系统要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-number">1.3.</span> <span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Docker-%E5%A6%82%E6%9E%9C%E6%9C%AA%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 安装 Docker (如果未安装)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BD%E7%BC%96%E8%AF%91%E5%A5%BD%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 下载编译好的二进制文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 从源码编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%90%E8%A1%8C%E9%9D%A2%E6%9D%BF"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 运行面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%AE%BF%E9%97%AE%E9%9D%A2%E6%9D%BF"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. 访问面板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E"><span class="toc-number">1.4.</span> <span class="toc-text">功能说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">容器管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">镜像管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7"><span class="toc-number">1.4.3.</span> <span class="toc-text">系统监控</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">多节点管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-Master-%E8%8A%82%E7%82%B9%EF%BC%88%E6%8E%A7%E5%88%B6%E8%8A%82%E7%82%B9%EF%BC%89"><span class="toc-number">1.5.1.</span> <span class="toc-text">启动 Master 节点（控制节点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-Worker-%E8%8A%82%E7%82%B9%EF%BC%88%E5%B7%A5%E4%BD%9C%E8%8A%82%E7%82%B9%EF%BC%89"><span class="toc-number">1.5.2.</span> <span class="toc-text">启动 Worker 节点（工作节点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD"><span class="toc-number">1.5.3.</span> <span class="toc-text">多节点功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%B5%8B%E8%AF%95"><span class="toc-number">1.6.</span> <span class="toc-text">快速测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%83%AD%E9%87%8D%E8%BD%BD%EF%BC%89"><span class="toc-number">1.7.</span> <span class="toc-text">开发模式（热重载）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">1.8.</span> <span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%E5%88%B0-Docker"><span class="toc-number">1.8.1.</span> <span class="toc-text">1. 无法连接到 Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8"><span class="toc-number">1.8.2.</span> <span class="toc-text">2. 端口被占用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97%E6%97%A0%E6%B3%95%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.8.3.</span> <span class="toc-text">3. 容器日志无法查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98"><span class="toc-number">1.8.4.</span> <span class="toc-text">4. 内存占用过高</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BC%96%E8%AF%91%E5%A4%B1%E8%B4%A5"><span class="toc-number">1.8.5.</span> <span class="toc-text">5. 编译失败</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98-%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96"><span class="toc-number">1.8.6.</span> <span class="toc-text">6. 网络问题 - 无法下载依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.9.</span> <span class="toc-text">安全说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81"><span class="toc-number">1.9.1.</span> <span class="toc-text">用户认证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E9%97%B4%E8%AE%A4%E8%AF%81"><span class="toc-number">1.9.2.</span> <span class="toc-text">节点间认证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.9.3.</span> <span class="toc-text">生产环境建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-number">1.10.</span> <span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E5%8D%A0%E7%94%A8"><span class="toc-number">1.10.1.</span> <span class="toc-text">资源占用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E6%8E%AA%E6%96%BD"><span class="toc-number">1.10.2.</span> <span class="toc-text">优化措施</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.11.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.12.</span> <span class="toc-text">API 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E8%8A%82%E7%82%B9-API"><span class="toc-number">1.12.1.</span> <span class="toc-text">单节点 API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%8A%82%E7%82%B9-API-Master"><span class="toc-number">1.12.2.</span> <span class="toc-text">多节点 API (Master)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A4%E8%AF%81-API"><span class="toc-number">1.12.3.</span> <span class="toc-text">认证 API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91"><span class="toc-number">1.13.</span> <span class="toc-text">扩展开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-number">1.14.</span> <span class="toc-text">许可证</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2025 By Reisen</div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script defer src="/js/fps.js"></script><script id="click-show-text" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://fastly.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>
