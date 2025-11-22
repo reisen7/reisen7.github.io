@@ -1,7 +1,7 @@
 #web_bg {
     /* 背景图像的地址（url括号里）  */
     /* background-image: url("https://sigtuna.oss-cn-beijing.aliyuncs.com/backgrd_compressed.png"); */
-    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
         
     background-repeat: no-repeat;
     /* 确保渐变背景覆盖整个页面 */
