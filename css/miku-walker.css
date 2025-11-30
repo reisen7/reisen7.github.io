@@ -1,11 +1,11 @@
-/* Miku 走路小动画组件 - 固定在左下角 */
+/* Miku 走路小动画组件 - 从左到右横穿屏幕 */
 
 /* 走路小动画 */
 .walking-scene {
     position: fixed;
     bottom: 20px;
-    left: 20px;
-    width: 300px;
+    left: 0;
+    width: 100vw;
     height: 100px;
     overflow: visible;
     z-index: 999;
@@ -19,7 +19,7 @@
     height: 100px;
     display: flex;
     align-items: flex-end;
-    animation: walkAcrossFixed 20s linear infinite;
+    animation: walkAcrossScreen 30s linear infinite;
     pointer-events: auto;
 }
 
@@ -76,9 +76,9 @@
     animation-play-state: paused;
 }
 
-@keyframes walkAcrossFixed {
+@keyframes walkAcrossScreen {
     0% { left: -100px; }
-    100% { left: 300px; }
+    100% { left: calc(100vw + 100px); }
 }
 
 @keyframes walk-cycle {
@@ -89,13 +89,6 @@
 /* 移动端适配 */
 @media (max-width: 768px) {
     .walking-scene {
-        width: 200px;
         bottom: 80px;
-        left: 10px;
-    }
-    
-    @keyframes walkAcrossFixed {
-        0% { left: -100px; }
-        100% { left: 200px; }
     }
 }
