@@ -1,0 +1,101 @@
+/* Miku 走路小动画组件 - 固定在左下角 */
+
+/* 走路小动画 */
+.walking-scene {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    height: 100px;
+    overflow: visible;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.walkers {
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    animation: walkAcrossFixed 20s linear infinite;
+    pointer-events: auto;
+}
+
+/* 雪碧图行走动画 */
+.miku-sprite {
+    width: 82px;
+    height: 72px;
+    background-image: url('/img/miku-walk.jpg');
+    background-size: 656px 72px;
+    background-repeat: no-repeat;
+    animation: walk-cycle 0.8s steps(8) infinite;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    position: relative;
+    cursor: pointer;
+}
+
+/* 对话气泡 */
+.speech-bubble {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #2c3e50;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border: 1px solid #39C5BB;
+    transition: all 0.3s ease;
+}
+
+/* 气泡小尾巴 */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+}
+
+/* 鼠标悬停在小人上时暂停行走动画和移动 */
+.miku-sprite:hover {
+    animation-play-state: paused;
+}
+
+.walkers:has(.miku-sprite:hover) {
+    animation-play-state: paused;
+}
+
+@keyframes walkAcrossFixed {
+    0% { left: -100px; }
+    100% { left: 300px; }
+}
+
+@keyframes walk-cycle {
+    from { background-position: 0 0; }
+    to { background-position: -656px 0; }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .walking-scene {
+        width: 200px;
+        bottom: 80px;
+        left: 10px;
+    }
+    
+    @keyframes walkAcrossFixed {
+        0% { left: -100px; }
+        100% { left: 200px; }
+    }
+}
