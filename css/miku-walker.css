@@ -90,24 +90,6 @@
 @media (max-width: 768px) {
     .walking-scene {
         bottom: 0px;
-        /* 确保在移动端也显示在最底部 */
-        height: 80px; /* 稍微减小高度避免遮挡内容 */
     }
-    
-    .walkers {
-        height: 80px; /* 对应调整walker高度 */
-    }
-    
-    .miku-sprite {
-        /* 移动端稍微缩小一点 */
-        width: 70px;
-        height: 60px;
-        background-size: 560px 60px;
-    }
-    
-    .speech-bubble {
-        font-size: 12px; /* 移动端字体稍小 */
-        padding: 4px 8px;
-        top: -30px;
-    }
+
 }
