@@ -1,0 +1,19 @@
+.fps {
+    border-radius: 5px;
+    padding-top: 10px;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    text-align: center;
+    font-size: 16px;
+    font-family: ZZAW;
+    opacity: 0.8;
+    overflow: hidden;
+    z-index: 9999;
+    position: fixed;
+    text-align: center;
+    width: 85px;
+    height: 35px;
+    right: 10px;
+    bottom: 15px;
+    --animate-duration: 520ms;
+}
