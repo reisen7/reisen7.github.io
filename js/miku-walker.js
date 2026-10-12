@@ -19,7 +19,7 @@
         
         // 重置状态
         isHovering = false;
-        bubble.textContent = '等等我';
+        bubble.textContent = '慢慢来';
         
         // 移除旧的事件监听器（通过克隆节点）
         const newMikuSprite = mikuSprite.cloneNode(true);
@@ -37,7 +37,7 @@
         
         newMikuSprite.addEventListener('mouseleave', function() {
             isHovering = false;
-            newBubble.textContent = '等等我';
+            newBubble.textContent = '慢慢来';
             scheduleNextSwitch();
         });
         
@@ -45,19 +45,19 @@
         function scheduleNextSwitch() {
             if (timeoutId) clearTimeout(timeoutId);
             
-            if (newBubble.textContent === '等等我') {
-                // 显示"等等我" 5秒后切换到"源小舞"
+            if (newBubble.textContent === '慢慢来') {
+                // 显示"慢慢来" 5秒后切换到"会好的"
                 timeoutId = setTimeout(function() {
                     if (!isHovering) {
-                        newBubble.textContent = '源小舞';
+                        newBubble.textContent = '会好的';
                         scheduleNextSwitch();
                     }
                 }, 5000);
             } else {
-                // 显示"源小舞" 1秒后切换到"等等我"
+                // 显示"会好的" 1秒后切换到"慢慢来"
                 timeoutId = setTimeout(function() {
                     if (!isHovering) {
-                        newBubble.textContent = '等等我';
+                        newBubble.textContent = '慢慢来';
                         scheduleNextSwitch();
                     }
                 }, 1000);
