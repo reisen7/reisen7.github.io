@@ -1592,31 +1592,6 @@
     
     
     <entry>
-      <title>监测本地storage的数值变化</title>
-      <link href="/2024/04/23/%E7%9B%91%E6%B5%8B%E6%9C%AC%E5%9C%B0storage%E7%9A%84%E6%95%B0%E5%80%BC%E5%8F%98%E5%8C%96/"/>
-      <url>/2024/04/23/%E7%9B%91%E6%B5%8B%E6%9C%AC%E5%9C%B0storage%E7%9A%84%E6%95%B0%E5%80%BC%E5%8F%98%E5%8C%96/</url>
-      
-        <content type="html"><![CDATA[<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>在前端开发中，我们经常需要在不同页面或不同标签页之间共享数据。<code>localStorage</code>是浏览器提供的一种持久化存储机制，可以在不同页面之间共享数据。但有时候，我们需要实时监听这些数据的变化，以便及时更新页面内容。本文将介绍如何监测本地<code>localStorage</code>的数值变化。</p><h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>浏览器提供了<code>storage</code>事件，当<code>localStorage</code>中的数据发生变化时，会触发该事件。需要注意的是，<strong>该事件只会在数据发生变化的页面以外的其他页面触发</strong>，即如果在当前页面修改了<code>localStorage</code>的值，当前页面不会触发<code>storage</code>事件，但其他打开的同域名页面会触发该事件。</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听localStorage变化</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;storage&#x27;</span>, <span class="keyword">function</span>(<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="comment">// 检查是否是我们关心的键发生了变化</span></span><br><span class="line">  <span class="keyword">if</span> (event.<span class="property">key</span> === <span class="string">&#x27;curServer&#x27;</span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;localStorage key &quot;curServer&quot; changed from:&#x27;</span>, event.<span class="property">oldValue</span>, <span class="string">&#x27;to:&#x27;</span>, event.<span class="property">newValue</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 根据新值重新加载表格数据</span></span><br><span class="line">    table.<span class="title function_">reload</span>(<span class="string">&#x27;var-table&#x27;</span>, &#123;</span><br><span class="line">      <span class="attr">url</span>: <span class="variable constant_">MODULE_PATH</span> + <span class="string">&#x27;/&#x27;</span> + <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;curServer&quot;</span>) + <span class="string">&#x27;/globalVariables&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>这种技术在以下场景特别有用：</p><ol><li><strong>多标签页应用</strong>：用户在一个标签页中修改了设置，其他标签页需要同步更新</li><li><strong>实时数据同步</strong>：不同页面需要共享同一份数据，并在数据变化时同步更新</li><li><strong>用户偏好设置</strong>：用户更改了主题、语言等偏好设置，所有打开的页面都需要立即应用新设置</li></ol><h2 id="关于表格重载"><a href="#关于表格重载" class="headerlink" title="关于表格重载"></a>关于表格重载</h2><p>在使用表格组件（如Layui Table）时，表格初始化后的URL是固定的。如果数据源发生变化，需要通过<code>table.reload()</code>方法重新指定URL并刷新表格：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重载表格，更新数据源URL</span></span><br><span class="line">table.<span class="title function_">reload</span>(<span class="string">&#x27;table-id&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;新的数据源URL&#x27;</span>  <span class="comment">// 动态构建新的URL</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li><code>storage</code>事件只在值真正改变时触发，如果设置的值与原值相同，则不会触发事件</li><li>该事件不会在触发变化的当前页面中触发，只会在同域名的其他页面中触发</li><li>事件对象包含以下有用的属性：<ul><li><code>key</code>: 发生变化的键名</li><li><code>oldValue</code>: 变化前的值</li><li><code>newValue</code>: 变化后的值</li><li><code>storageArea</code>: 指向发生变化的 Storage 对象</li><li><code>url</code>: 触发该变化的页面的URL</li></ul></li></ol><p>通过这种方式，我们可以实现不同页面间的数据实时同步，提升用户体验。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 代码 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Javascript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>给已经打好的jar包添加依赖jar包重新打包</title>
       <link href="/2024/04/23/%E7%BB%99%E5%B7%B2%E7%BB%8F%E6%89%93%E5%A5%BD%E7%9A%84jar%E5%8C%85%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96jar%E5%8C%85%E9%87%8D%E6%96%B0%E6%89%93%E5%8C%85/"/>
       <url>/2024/04/23/%E7%BB%99%E5%B7%B2%E7%BB%8F%E6%89%93%E5%A5%BD%E7%9A%84jar%E5%8C%85%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96jar%E5%8C%85%E9%87%8D%E6%96%B0%E6%89%93%E5%8C%85/</url>
@@ -1634,6 +1609,31 @@
         <tags>
             
             <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>监测本地storage的数值变化</title>
+      <link href="/2024/04/23/%E7%9B%91%E6%B5%8B%E6%9C%AC%E5%9C%B0storage%E7%9A%84%E6%95%B0%E5%80%BC%E5%8F%98%E5%8C%96/"/>
+      <url>/2024/04/23/%E7%9B%91%E6%B5%8B%E6%9C%AC%E5%9C%B0storage%E7%9A%84%E6%95%B0%E5%80%BC%E5%8F%98%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>在前端开发中，我们经常需要在不同页面或不同标签页之间共享数据。<code>localStorage</code>是浏览器提供的一种持久化存储机制，可以在不同页面之间共享数据。但有时候，我们需要实时监听这些数据的变化，以便及时更新页面内容。本文将介绍如何监测本地<code>localStorage</code>的数值变化。</p><h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>浏览器提供了<code>storage</code>事件，当<code>localStorage</code>中的数据发生变化时，会触发该事件。需要注意的是，<strong>该事件只会在数据发生变化的页面以外的其他页面触发</strong>，即如果在当前页面修改了<code>localStorage</code>的值，当前页面不会触发<code>storage</code>事件，但其他打开的同域名页面会触发该事件。</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听localStorage变化</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;storage&#x27;</span>, <span class="keyword">function</span>(<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="comment">// 检查是否是我们关心的键发生了变化</span></span><br><span class="line">  <span class="keyword">if</span> (event.<span class="property">key</span> === <span class="string">&#x27;curServer&#x27;</span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;localStorage key &quot;curServer&quot; changed from:&#x27;</span>, event.<span class="property">oldValue</span>, <span class="string">&#x27;to:&#x27;</span>, event.<span class="property">newValue</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 根据新值重新加载表格数据</span></span><br><span class="line">    table.<span class="title function_">reload</span>(<span class="string">&#x27;var-table&#x27;</span>, &#123;</span><br><span class="line">      <span class="attr">url</span>: <span class="variable constant_">MODULE_PATH</span> + <span class="string">&#x27;/&#x27;</span> + <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;curServer&quot;</span>) + <span class="string">&#x27;/globalVariables&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>这种技术在以下场景特别有用：</p><ol><li><strong>多标签页应用</strong>：用户在一个标签页中修改了设置，其他标签页需要同步更新</li><li><strong>实时数据同步</strong>：不同页面需要共享同一份数据，并在数据变化时同步更新</li><li><strong>用户偏好设置</strong>：用户更改了主题、语言等偏好设置，所有打开的页面都需要立即应用新设置</li></ol><h2 id="关于表格重载"><a href="#关于表格重载" class="headerlink" title="关于表格重载"></a>关于表格重载</h2><p>在使用表格组件（如Layui Table）时，表格初始化后的URL是固定的。如果数据源发生变化，需要通过<code>table.reload()</code>方法重新指定URL并刷新表格：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重载表格，更新数据源URL</span></span><br><span class="line">table.<span class="title function_">reload</span>(<span class="string">&#x27;table-id&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;新的数据源URL&#x27;</span>  <span class="comment">// 动态构建新的URL</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li><code>storage</code>事件只在值真正改变时触发，如果设置的值与原值相同，则不会触发事件</li><li>该事件不会在触发变化的当前页面中触发，只会在同域名的其他页面中触发</li><li>事件对象包含以下有用的属性：<ul><li><code>key</code>: 发生变化的键名</li><li><code>oldValue</code>: 变化前的值</li><li><code>newValue</code>: 变化后的值</li><li><code>storageArea</code>: 指向发生变化的 Storage 对象</li><li><code>url</code>: 触发该变化的页面的URL</li></ul></li></ol><p>通过这种方式，我们可以实现不同页面间的数据实时同步，提升用户体验。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Javascript </tag>
             
         </tags>
       
